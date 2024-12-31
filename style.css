@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    background: linear-gradient(to bottom, aqua, hsl(240, 67%, 70%));
+}
+
+.outer-layer {
+    padding: 20px;
+    border: 10px solid darkblue;
+    background: rgb(0 0 0);
+    border-radius: 22px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+}
+
+.display-output {
+    margin-bottom: 10px;
+}
+
+#input-text {
+    margin-top: 5px;
+    text-align: center;
+    background-color: rgb(97 94 94);
+    border-radius: 15px;
+    font-size: 1.3rem;
+    box-shadow: 1px 1px 5px white, -1px -1px 5px white;
+}
+
+.buttons {
+    display: flex;
+    padding: 2px;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.operator-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    border-radius: 50px;
+    background-color: rgb(225, 185, 84);
+}
+
+.btn.number {
+    font-size: 1.4rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.btn.number:hover {
+    background-color: rgb(167, 129, 34);
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.first-row,
+.second-row,
+.third-row,
+.fourth-row,
+.fifth-row {
+    display: flex;
+}
+
+
+.first-row>*,
+.second-row>*,
+.third-row>*,
+.fourth-row>* {
+    width: 50%;
+    height: 31px;
+}
+
+.fifth-row .btn{
+    width: 30%;
+    height: 33px;
+}
+
+.btn.calculate {
+    flex: 1;
+    background-color: crimson;
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn.calculate:hover {
+    background-color: rgb(187, 8, 29);
+    transform: scale(1.05);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn.allclear {
+    background-color: rgba(0, 110, 255, 0.842);
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.btn.allclear:hover {
+    background-color: rgb(38, 0, 255);
+    transform: scale(1.05);
+    font-weight: bold;
+}
+
+.btn.delete {
+    background-color: rgb(167, 7, 7);
+    color: whitesmoke;
+    font-size: 1.1rem;
+    text-align: center;
+    border: none;
+    transition: all 0.3s
+}
+
+.btn.delete:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+    font-weight: bold;
+}
+
+.btn.operator {
+    background-color: gold;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.btn.operator:hover {
+    background-color: hsl(51, 89%, 33%);
+    transform: scale(1.1);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.operator-column .btn.operator {
+    align-self: flex-end;
+    width: 50px;
+    height: 39px;
+}
+
+.btn.operator.equal {
+    flex: 1;
+}
